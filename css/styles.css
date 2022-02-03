@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(0, 0%, 95%);
+  font-family: "Lexend Deca", sans-serif;
+  color: hsl(0, 0%, 95%);
+}
+
+/* Layout */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 90rem;
+  margin: 10rem auto;
+}
+
+.card {
+  padding: 4.8rem;
+}
+
+/* Design */
+.sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-radius: 7px 0 0 7px;
+}
+
+.suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 7px 7px 0;
+}
+
+.title {
+  font-family: "Big Shoulders Display", cursive;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.description {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 8rem;
+}
+
+.btn {
+  border: none;
+  font-family: inherit;
+  padding: 1.6rem 3.2rem;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: inherit;
+  color: hsl(0, 0%, 95%);
+  box-shadow: inset 0 0 0 2px hsl(0, 0%, 95%);
+}
+
+.btn--sedan {
+  color: hsl(31, 77%, 52%);
+}
+
+.btn--suv {
+  color: hsl(184, 100%, 22%);
+}
+
+.btn--luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+/* Media queries */
+
+/* Below 896px */
+@media (max-width: 56em) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 60rem;
+  }
+
+  .suv {
+    border-radius: 0 7px 7px 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 7px 7px;
+    width: 30rem;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+/* Below 496px */
+@media (max-width: 31em) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 32.5rem;
+  }
+
+  .sedan {
+    border-radius: 7px 7px 0 0;
+  }
+
+  .suv {
+    border-radius: 0;
+  }
+
+  .luxury {
+    width: 32.5rem;
+  }
+}
